@@ -1,11 +1,11 @@
 /* ===== PENGATURAN UTAMA – ubah teks di sini ===== */
 window.CONFIG = {
-  company: { name: "PT. Tri ELang Indo Maritim ", brand: "Tri Elang Palembang", branch: "Palembang", subtitle: "AGEN PELAYARAN" },
+  company: { name: "PT. Tri ELang Jaya Maritim ", brand: "Tri Elang Jaya Palembang", branch: "Palembang", subtitle: "AGEN PELAYARAN" },
 
   // Lokasi cabang Palembang
-  address: "Komp. Sierra Vista, Lrg. Hijrah No.42, RT.005/RW.003, Talang Klp., Kec. Alang-Alang Lebar, Kota Palembang, Sumatera Selatan 30961",
-  mapsUrl: "https://maps.app.goo.gl/Kgu3SjvuKdU91NgQ9",
-  mapEmbedUrl: "https://www.google.com/maps?q=3QW7%2BG4%20Talang%20Klp.%2C%20Palembang&output=embed",
+  address: "Perumahan Cemara, Jl. Padat Karya Blok LRG No. E-09, RT 03/RW 01, Kel. Srimulya, Kec. Sematangborang, Kota Palembang, Sumatera Selatan",
+  mapsUrl: "https://maps.app.goo.gl/QcacFRg4LXEgiaUUA",
+  mapEmbedUrl: "https://www.google.com/maps?q=Perumahan%20Cemara%2C%20Jl.%20Padat%20Karya%2C%20Srimulya%2C%20Sematang%20Borang%2C%20Palembang&output=embed",
   branchPhone: "62 711 570096",              // Telepon kantor Palembang
   branchEmail: "palembang@trielang.co.id",   // Email kantor Palembang
 
@@ -23,7 +23,7 @@ window.CONFIG = {
   // Urutan section di halaman
   sectionOrder: ["navbar","hero","highlights","about","services","products","tagline","contact","footer"],
 
-  nav: [ { id: "hero", label: "Beranda" }, { id: "about", label: "Tentang Kami" }, { id: "services", label: "Layanan" }, { id: "products", label: "EPBA" }, { id: "contact", label: "Kontak" } ],
+  nav: [ { id: "hero", label: "Beranda" }, { id: "about", label: "Tentang Kami" }, { id: "services", label: "Layanan" }, { id: "products", label: "EPDA" }, { id: "contact", label: "Kontak" } ],
 
   hero: { cta: { label: "Layanan Perusahaan Kami", target: "highlights" } },
 

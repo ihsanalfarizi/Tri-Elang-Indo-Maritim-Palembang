@@ -43,11 +43,12 @@ h2{font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:32px}
 /* ===== hero ===== */
 .hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:center;justify-content:center;color:#fff;text-align:center;
 background:#0d2a40 center/cover no-repeat}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,20,35,.45) 0%,rgba(10,20,35,.35) 50%,rgba(10,20,35,.5) 100%)}
-.hero-content{position:relative;z-index:1;width:min(1200px,92%);margin-top:-6vh}
-.hero h1{font-family:var(--font-title);font-weight:800;color:#fff;font-size:clamp(1.9rem,6vw,4.4rem);letter-spacing:.01em;line-height:1.15;margin-bottom:14px;text-shadow:0 3px 14px rgba(0,0,0,.45)}
-.hero-branch{font-family:var(--font-title);font-weight:800;font-size:clamp(1.3rem,3.8vw,2.8rem);letter-spacing:.12em;color:var(--buoy);margin-bottom:26px;text-shadow:0 3px 14px rgba(0,0,0,.5)}
-.hero-sub{font:500 clamp(1.05rem,2.6vw,1.9rem) var(--font-body);letter-spacing:.01em;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.45)}
+.hero-overlay{position:absolute;inset:0;background:radial-gradient(ellipse 70% 45% at 50% 50%,rgba(8,18,32,.5),transparent 75%),linear-gradient(180deg,rgba(10,20,35,.5) 0%,rgba(10,20,35,.35) 50%,rgba(10,20,35,.55) 100%)}
+.hero-content{position:relative;z-index:1;width:min(1280px,94%);margin-top:-4vh}
+.hero h1{font-family:var(--font-title);font-weight:800;color:#fff;font-size:clamp(1.5rem,4.4vw,3.6rem);letter-spacing:.01em;line-height:1.18;margin:0 auto 16px;text-wrap:balance;text-shadow:0 3px 14px rgba(0,0,0,.55)}
+.hero-branch{display:inline-block;font-family:var(--font-title);font-weight:800;font-size:clamp(1.15rem,3vw,2.2rem);letter-spacing:.28em;padding-left:.28em;color:var(--buoy);margin-bottom:22px;text-shadow:0 3px 14px rgba(0,0,0,.6)}
+.hero-branch::after{content:"";display:block;width:64px;height:3px;margin:14px auto 0;background:var(--buoy);border-radius:2px}
+.hero-sub{font:500 clamp(1rem,2.2vw,1.6rem) var(--font-body);letter-spacing:.22em;text-transform:uppercase;color:#fff;text-shadow:0 2px 10px rgba(0,0,0,.6)}
 .hero-down{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);z-index:1;color:#fff;opacity:.85;text-decoration:none;animation:bob 2s ease-in-out infinite}
 .hero-down:hover{opacity:1;color:var(--buoy)}
 @keyframes bob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,7px)}}

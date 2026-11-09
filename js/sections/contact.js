@@ -14,7 +14,6 @@ window.Sections.contact = {
     }
     h += '<div class="container contact-in"><h2>Kontak</h2>' +
          '<p class="addr"><a href="' + C.mapsUrl + '" target="_blank" rel="noopener">' + C.address + '</a></p>' +
-         '<p class="status" id="openStatus"></p>' +
          '<ul class="contact-list">';
     if (phone) h += '<li>' + icoPhone + '<a href="tel:' + phoneHref + '">' + phone + '</a></li>';
     if (email) h += '<li>' + icoMail + '<a href="mailto:' + email + '">' + email + '</a></li>';

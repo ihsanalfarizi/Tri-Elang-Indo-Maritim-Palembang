@@ -17,9 +17,6 @@ window.CONFIG = {
     profileUrl: "https://drive.google.com/file/d/1fNxTwVXqKvgISBq_CJcyIGJCO3NS71gk/view?usp=drive_link"
   },
 
-  // Jam operasional (0 = Minggu ... 6 = Sabtu). null = tutup. Silakan sesuaikan.
-  hours: { timezone: "Asia/Jakarta", days: { 0: null, 1: ["08:00","17:00"], 2: ["08:00","17:00"], 3: ["08:00","17:00"], 4: ["08:00","17:00"], 5: ["08:00","17:00"], 6: ["08:00","12:00"] } },
-
   // Urutan section di halaman
   sectionOrder: ["navbar","hero","highlights","about","services","products","tagline","contact","footer"],
 

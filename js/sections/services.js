@@ -81,7 +81,7 @@ window.Sections.services = {
     var chips = (S.list || []).map(function (x) { return '<li>' + x + '</li>'; }).join("");
     return '<section class="section services" id="services"><div class="container">' +
       '<div class="svc-head"><span class="svc-eyebrow">' + (S.eyebrow || "Layanan Kami") + '</span>' +
-      '<h2>' + S.title + '</h2>' + (S.intro ? '<p>' + S.intro + '</p>' : '') + '</div>' + rows + this.vm(C) +
+      '<h2>' + S.title + '</h2>' + (S.intro ? '<p>' + S.intro + '</p>' : '') + '</div>' + rows +
       '<div class="other"><h3>' + S.otherTitle + '</h3><p>' + S.otherText + '</p>' +
       '<h4>' + S.listTitle + '</h4><ul class="chips">' + chips + '</ul></div>' +
       '</div></section>';
@@ -157,49 +157,10 @@ window.Sections.services = {
     return '<section class="section services svc-show" id="services"><div class="container">' +
       '<div class="svc-head"><span class="svc-eyebrow">' + (S.eyebrow || "Layanan Kami") + '</span>' +
       '<h2>' + S.title + '</h2>' + (S.intro ? '<p>' + S.intro + '</p>' : '') + '</div>' +
-      '<div class="svc-tabs" role="tablist">' + tabs + '</div>' + panels + this.vm(C) +
+      '<div class="svc-tabs" role="tablist">' + tabs + '</div>' + panels +
       '<div class="svc-more"><div><h3>' + S.otherTitle + '</h3><p>' + S.otherText + '</p></div>' +
       '<div><h4>' + S.listTitle + '</h4><ul>' + chips + '</ul></div></div>' +
       '</div></section>';
-  },
-
-  // ===== Visi & Misi (tampil di semua tampilan Layanan) =====
-  // Ubah teksnya lewat config.js -> services.vision / services.mission  ({ title, text })
-  defaultVision: {
-    title: "Visi Kami",
-    text: "PT Trielang Indo Maritim (TIM) berkomitmen membantu pelanggan baru maupun lama kami (pemilik kapal, eksportir, dan importir) agar mampu bersaing di pasar global yang terus berkembang, dengan memfasilitasi rantai pasok yang berkelanjutan dan mengintegrasikan setiap langkah di sepanjang prosesnya."
-  },
-  defaultMission: {
-    title: "Misi Kami",
-    text: "Mengabdi kepada principal dan pemilik kapal dengan sepenuh hati, memastikan solusi yang cepat dan efektif untuk setiap persoalan yang muncul selama kunjungan kapal di seluruh pelabuhan Indonesia."
-  },
-
-  vmCss: function () {
-    if (document.getElementById("services-vm-css")) return;
-    var st = document.createElement("style");
-    st.id = "services-vm-css";
-    st.textContent =
-      ".svc-vm{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:44px;text-align:left}" +
-      ".svc-vmc{background:#fff;color:var(--ink);border-radius:20px;padding:38px 36px;border-top:5px solid var(--buoy);box-shadow:0 12px 30px rgba(10,37,64,.14);transition:transform .3s}" +
-      ".svc-vmc:hover{transform:translateY(-5px)}" +
-      ".svc-vmc .vm-ico{display:grid;place-items:center;width:58px;height:58px;border-radius:14px;background:var(--blue-grad);color:var(--buoy);margin-bottom:18px}" +
-      ".svc-vmc h3{font-size:1.6rem;color:var(--navy);margin-bottom:12px}" +
-      ".svc-vmc p{font-size:1.08rem;line-height:1.8;color:#16293a}" +
-      "@media (max-width:820px){.svc-vm{grid-template-columns:1fr}.svc-vmc{padding:28px 24px}}";
-    document.head.appendChild(st);
-  },
-
-  vm: function (C) {
-    this.vmCss();
-    var S = C.services;
-    var V = S.vision || this.defaultVision, M = S.mission || this.defaultMission;
-    var icon = function (p) { return '<span class="vm-ico"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + p + '</svg></span>'; };
-    var eye = '<path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>';
-    var flag = '<path d="M5 21V4M5 4h12l-2.5 4L17 12H5"/>';
-    return '<div class="svc-vm">' +
-      '<div class="svc-vmc">' + icon(eye) + '<h3>' + V.title + '</h3><p>' + V.text + '</p></div>' +
-      '<div class="svc-vmc">' + icon(flag) + '<h3>' + M.title + '</h3><p>' + M.text + '</p></div>' +
-      '</div>';
   },
 
   // ===== Tampilan 3: "panels" (panel foto yang melebar saat dipilih) =====
@@ -273,7 +234,7 @@ window.Sections.services = {
     return '<section class="section services svp-sec" id="services"><div class="container">' +
       '<div class="svp-head"><span class="svp-eyebrow">' + (S.eyebrow || "Layanan Kami") + '</span>' +
       '<h2>' + S.title + '</h2>' + (S.intro ? '<p>' + S.intro + '</p>' : '') + '</div>' +
-      '<div class="svp-wrap">' + panels + '</div>' + this.vm(C) +
+      '<div class="svp-wrap">' + panels + '</div>' +
       '<div class="svp-more"><div><h3>' + S.otherTitle + '</h3><p>' + S.otherText + '</p></div>' +
       '<div><h4>' + S.listTitle + '</h4><ul>' + chips + '</ul></div></div>' +
       '</div></section>';

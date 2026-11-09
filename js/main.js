@@ -9,6 +9,11 @@
   l.rel = "icon"; l.type = "image/jpeg"; l.href = icon;
   document.head.appendChild(l);
 
+  // Nomor di atas kartu "Layanan Perusahaan Kami" disembunyikan
+  var hide = document.createElement("style");
+  hide.textContent = ".hlc-num{display:none!important}";
+  document.head.appendChild(hide);
+
   // Tiap halaman menentukan section-nya lewat window.PAGE_SECTIONS.
   // Jika tidak ada, pakai CONFIG.sectionOrder (satu halaman penuh seperti sebelumnya).
   var order = window.PAGE_SECTIONS || C.sectionOrder;
@@ -28,7 +33,7 @@
     st.textContent =
       ".subpage .navbar{background:var(--blue-grad)!important;box-shadow:0 2px 12px rgba(0,0,0,.25)!important}" +
       ".subpage #app{min-height:100vh;display:flex;flex-direction:column}" +
-      ".subpage #app>section:first-of-type{margin-top:68px}" +
+      ".subpage #app>section:first-of-type{margin-top:68px;flex:1 0 auto}" +
       ".subpage #app>.footer{margin-top:auto}";
     document.head.appendChild(st);
   }

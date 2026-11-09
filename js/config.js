@@ -1,6 +1,6 @@
 /* ===== PENGATURAN UTAMA – ubah teks di sini ===== */
 window.CONFIG = {
-  company: { name: "PT. Tri ELang Jaya Maritim ", brand: "Tri Elang Jaya Palembang", branch: "Palembang", subtitle: "AGEN PELAYARAN" },
+  company: { name: "PT. Tri ELang Indo Maritim ", brand: "Tri Elang Indo Maritim  Palembang", branch: "Palembang", subtitle: "AGEN PELAYARAN" },
 
   // Lokasi cabang Palembang
   address: "Perumahan Cemara, Jl. Padat Karya Blok LRG No. E-09, RT 03/RW 01, Kel. Srimulya, Kec. Sematangborang, Kota Palembang, Sumatera Selatan",
